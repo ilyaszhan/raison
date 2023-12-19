@@ -1,0 +1,26 @@
+.pageTitle {
+    text-align: center;
+
+    .title {
+        line-height: 1;
+        margin-bottom: 2.4rem;
+    }
+
+    .text {
+        color: var(--text-grey-dark-color);
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .pageTitle {
+
+        .title {
+            line-height: var(--lh-h1);
+            margin-bottom: 1.6rem;
+        }
+
+    }
+
+}

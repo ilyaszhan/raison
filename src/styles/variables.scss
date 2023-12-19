@@ -1,0 +1,103 @@
+$color: #2d64fc;
+
+// Sizes
+:root {
+    // General sizes
+    --rem: 10px;
+
+    // Text sizes
+    --fz-h1: 4.8rem;
+    --fz-h2: 4rem;
+    --fz-h3: 3.2rem;
+    --fz-h4: 2.8rem;
+    --fz-h5: 2.4rem;
+    --fz-h6: 2rem;
+    --fz-regular: 1.8rem;
+
+    // Letter Spacing
+    --letter-spacing-small: -0.03em;
+    --letter-spacing-smaller: -0.021em;
+    --letter-spacing-regular: -0.011em;
+
+    // Line Height
+    --lh-regular: 2.4rem;
+    --lh-h1: 5.6rem;
+    --lh-h2: 4.8rem;
+    --lh-h3: 3.8rem;
+    --lh-h4: 3.2rem;
+    --lh-h5: 2.8rem;
+    --lh-h6: 2.4rem;
+
+    // Container
+    --container: 108rem;
+
+    // Radius
+    --radius-regular: 2rem;
+}
+
+@mixin Light {
+
+    // Background
+    --bg-regular: #fff;
+    --bg-body: #F8F9FA;
+
+    // Text colors
+    --text-regular-color: #0A0A0A;
+    --text-grey-dark-color: #404040;
+    --text-grey-color: #9E9E9E;
+
+    // Shadow
+    --shadow-color: #2c3b4026;
+    --shadow-regular: 0 0 40px var(--shadow-color);
+
+    // Theme color
+    --theme: #{$color};
+    --theme-dark: #{darken($color, 10%)};
+    --theme-light: #{lighten($color, 10%)};
+    --theme-focus: #{transparentize($color, 0.7)};
+    --theme-opacity: #{transparentize($color, 0.9)};
+
+    // Apply
+    color: var(--text-regular-color);
+    color-scheme: light;
+}
+
+// Colors
+:root {
+    @include Light()
+}
+
+@media (max-width: 1200px) {
+
+    :root {
+        // Text sizes
+        --fz-h1: 2.8rem;
+        --fz-h2: 2.4rem;
+        --fz-h3: 2.2rem;
+        --fz-h4: 2rem;
+        --fz-h5: 1.8rem;
+        --fz-h6: 1.6rem;
+        --fz-regular: 1.6rem;
+
+        // Line Height
+        --lh-regular: 2.4rem;
+        --lh-h1: 3.2rem;
+        --lh-h2: 2.7rem;
+        --lh-h3: 2.6rem;
+        --lh-h4: 2.4rem;
+        --lh-h5: 2.4rem;
+        --lh-h6: 2.4rem;
+
+        // Letter Spacing
+        --letter-spacing-small: -0.021em;
+        --letter-spacing-smaller: -0.017em;
+        --letter-spacing-regular: -0.011em;
+
+        // Container
+        --container: calc(100% - 8rem);
+
+        // Radius
+        --radius-regular: 1.6rem;
+    }
+
+}

@@ -1,0 +1,118 @@
+.officesGrid {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    --gap: 2.4rem;
+    --margin: calc(var(--gap) / 2);
+    --items-in-row: 3;
+    --large-items-in-row: 2;
+
+    .line {
+        width: calc(100% + var(--gap));
+        margin: calc(var(--margin) * -1);
+        display: flex;
+        flex-wrap: wrap;
+
+        .item {
+            --width: var(--items-in-row);
+            width: calc(100% / var(--width) - var(--gap));
+            margin: var(--margin);
+            box-shadow: var(--shadow-regular);
+            background: var(--bg-regular);
+            border-radius: var(--radius-regular);
+            padding: 2.4rem;
+
+            &.large {
+                --width: var(--large-items-in-row);
+            }
+
+            .header {
+                position: relative;
+                padding-right: calc(var(--image) + 2rem);
+                margin-bottom: 2rem;
+
+                .image {
+                    --size: 4rem;
+                    width: var(--size);
+                    height: var(--size);
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+
+                }
+
+            }
+
+            .body {
+
+                .contacts {
+                    margin-bottom: 1.2rem;
+
+                    .link {
+                        display: block;
+                        color: var(--text-regular-color);
+                        transition: 0.3s;
+
+                        &:hover {
+                            color: var(--theme);
+                        }
+
+                    }
+
+                }
+
+                .address {
+                    color: var(--text-grey-color);
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 1200px) {
+
+    .officesGrid {
+        --gap: 1.6rem;
+        --items-in-row: 1;
+        --large-items-in-row: 1;
+
+        .line {
+
+            .item {
+                padding: 1.6rem;
+                order: var(--mobile-order);
+
+                .header {
+                    margin-bottom: 1.6rem;
+
+                    .image {
+                        --size: 3.2rem;
+                    }
+
+                }
+
+                .body {
+
+                    .contacts {
+                        margin-bottom: 0.8rem;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
